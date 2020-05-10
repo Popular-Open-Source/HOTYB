@@ -14,8 +14,14 @@ require "./database"
 require "./initializers/**"
 
 # Start Generator Dependencies: Don't modify.
+require "../src/models/**"
 # End Generator Dependencies
 
 require "../src/controllers/application_controller"
 require "../src/controllers/**"
 require "./routes"
+require "file_utils"
+
+PROJECT_ROOT = FileUtils.pwd
+
+PUBLIC_IMG_PATH = "#{PROJECT_ROOT}/public/img"

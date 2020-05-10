@@ -24,11 +24,11 @@ Amber::Server.configure do |settings|
   # debug for all environments. The available log levels are: debug, info, warn,
   # error, fatal, and unknown.
   #
-  # settings.logging.colorize = true
-  # settings.logging.severity = "debug"
+   settings.logging.colorize = true
+   settings.logging.severity = "debug"
   # settings.logging.filter = %w(password confirm_password)
   # settings.logging.skip = %w()
-  # settings.logging.context = %w(request headers cookies session params)
+   settings.logging.context = %w(request headers cookies session params)
   #
   #
   # Secret Key Base: is used for specifying a key which allows sessions
