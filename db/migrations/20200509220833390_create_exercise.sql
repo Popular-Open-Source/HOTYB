@@ -1,11 +1,11 @@
 -- +micrate Up
 CREATE TABLE exercises (
-  id BIGSERIAL PRIMARY KEY,
-  name VARCHAR,
-  description VARCHAR,
-  thumbnail VARCHAR,
-  demo_video VARCHAR,
-  difficulty INT,
+  id BIGSERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR NOT NULL,
+  description VARCHAR NOT NULL,
+  thumbnail VARCHAR NOT NULL,
+  demo_video VARCHAR NOT NULL,
+  difficulty INT NOT NULL,
   created_at TIMESTAMP,
   updated_at TIMESTAMP
 );
