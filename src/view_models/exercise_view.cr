@@ -2,10 +2,10 @@ require "../models/exercise"
 
 class ExerciseView
   getter id : Int64?
-  getter name : String?
-  getter description : String?
-  getter thumbnail : String?
-  getter demo_video : String?
+  getter name : String
+  getter description : String
+  getter thumbnail : String
+  getter demo_video : String
   getter difficulty : String
 
   def initialize(exercise : Exercise)

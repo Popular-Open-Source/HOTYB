@@ -10,9 +10,9 @@
   .form-group
     == text_field(name: "description", value: exercise.description, placeholder: "Description", class: "form-control")
   .form-group
-    == file_field(name: "thumbnail", value: exercise.thumbnail, placeholder: "Link to thumbnail", class: "form-control")
+    == file_field(name: "thumbnail", value: exercise.thumbnail, class: "form-control")
   .form-group
-    == text_field(name: "demo_video", value: exercise.demo_video, placeholder: "Link to video", class: "form-control")
+    == file_field(name: "demo_video", value: exercise.demo_video, class: "form-control")
   .form-group
     == select_field(name: "difficulty", collection: ExerciseView.difficulty_collection(), selected: exercise.difficulty, placeholder: "Difficulty", class: "form-control")
   == submit("Submit", class: "btn btn-success btn-sm")

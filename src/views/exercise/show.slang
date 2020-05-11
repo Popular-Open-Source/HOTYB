@@ -1,9 +1,13 @@
-h1 Show Exercise
-p = exercise.name
+h1 = exercise.name
+p = "Difficulty Level "
+  span class="text-primary"
+    = exercise.difficulty
 p = exercise.description
-img src=exercise.thumbnail height=500 width=500
-p = exercise.demo_video
-p = exercise.difficulty.to_s
+.row
+  .col-6
+    img src=exercise.thumbnail class="img-fluid"
+  .col-6
+    video controls="true" src=exercise.demo_video class="img-fluid"
 p
   == link_to("Back", "/exercises", class: "btn btn-light btn-sm")
   == link_to("Edit", "/exercises/#{exercise.id}/edit", class: "btn btn-success btn-sm")
