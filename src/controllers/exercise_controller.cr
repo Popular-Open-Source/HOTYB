@@ -30,10 +30,11 @@ class ExerciseController < ApplicationController
 
   def create
     exercise = Exercise.new exercise_params.validate!
-
-    image = params.files["thumbnail"]
     begin
+      video = params.files["demo_video"]
+      image = params.files["thumbnail"]
       exercise.thumbnail = uploader.upload_public_image(image.file)
+      exercise.demo_video = uploader.upload_public_file(video.file)
     rescue ex : BaseUploader::UploadException
     end
 
@@ -64,7 +65,6 @@ class ExerciseController < ApplicationController
     params.validation do
       required :name
       required :description
-      required :demo_video
       required :difficulty
     end
   end

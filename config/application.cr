@@ -25,3 +25,4 @@ require "file_utils"
 PROJECT_ROOT = FileUtils.pwd
 
 PUBLIC_IMG_PATH = "#{PROJECT_ROOT}/public/img"
+PUBLIC_UPLOADS_PATH = "#{PROJECT_ROOT}/public/uploads"
